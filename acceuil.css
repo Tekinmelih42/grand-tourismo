@@ -1,23 +1,43 @@
 header{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-div h3{
-    color:rgb(252, 252, 251);
-}
-
-nav{
-    display:flex;
-    justify-content: space-evenly;
     align-items: center;
+    padding: 15px 40px;
+}
+
+.logo h3{
+    color: white;
+}
+
+/* Nav */
+nav{
+    display: flex;
+    gap: 30px;
 }
 
 nav a{
-    color:rgb(252, 252, 251);
+    color: white;
     text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+/* RECHERCHE */
+.recherche{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recherche input{
+    padding: 5px;
+}
+
+.recherche button{
+    padding: 5px;
+    cursor: pointer;
 }
 
 
@@ -25,7 +45,7 @@ body {
     background: black;
     height: 100vh;
     background-image: url("images/porsche_acceuil.png");
-    background-size: contain;   /* PAS cover */
+    background-size: contain;  
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -49,4 +69,26 @@ body {
     font-weight: bold;
     letter-spacing: 3px;
     color:rgb(252, 252, 251);
+}
+
+
+/* Bouton catalogue */
+.bouton-catalogue{
+    position: absolute;
+    top: 60%;
+    left: 8%;
+}
+
+.bouton-catalogue a{
+    display: inline-block;
+    background: #e5e5e5;
+    color: black;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.bouton-catalogue a:hover{
+    background: white;
 }
