@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <div class="logo">
+            <h3>Tourismo</h3>
+        </div>
+
+        <nav>
+            <a href="acceuil.html">Accueil</a>
+            <a href="preview_catalogue.html">Catalogue</a>
+            <a href="nos_services.html">Nos services</a>
+            <a href="contact.html">Contact</a>
+            <a href="localisation.html">Localisation</a>
+        </nav>
+
+
+        <div class="compte">
+            <a href="inscription.php" class="btn-compte">S'inscrire</a>
+        </div>
+
+    </header>
+
+    <section class="services">
+    <h2>Nos services</h2>
+    <p>Une expertise complète pour répondre à toutes vos attentes automobiles.</p>
+
+    <div class="services-grid">
+
+        <!-- SERVICE 1 -->
+        <div class="service-card">
+            <h3>Vente de véhicules</h3>
+            <p>Découvrez notre sélection exclusive de véhicules sportifs et haut de gamme.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Véhicules contrôlés et certifiés</li>
+                    <li>✔ Historique complet fourni</li>
+                    <li>✔ Financement possible</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Contacter un conseiller</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-card">
+            <h3>Personnalisation</h3>
+            <p>Donnez une identité unique à votre véhicule.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Covering complet ou partiel</li>
+                    <li>✔ Jantes et finitions premium</li>
+                    <li>✔ Personnalisation intérieure</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Contacter un expert</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-card">
+            <h3>Detailing</h3>
+            <p>Nettoyage professionnel et protection.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Nettoyage intérieur/extérieur</li>
+                    <li>✔ Polissage carrosserie</li>
+                    <li>✔ Traitement céramique</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Prendre rendez-vous</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="service-card">
+            <h3>Dépôt-vente</h3>
+            <p>Vendez votre véhicule rapidement.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Estimation gratuite</li>
+                    <li>✔ Gestion complète des acheteurs</li>
+                    <li>✔ Sécurisation des paiements</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Faire estimer</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="service-card">
+            <h3>Importation</h3>
+            <p>Accédez à des modèles rares.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Recherche personnalisée</li>
+                    <li>✔ Import depuis Europe</li>
+                    <li>✔ Gestion administrative</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Faire une demande</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div class="service-card">
+            <h3>Garantie & suivi</h3>
+            <p>Roulez en toute sérénité.</p>
+
+            <div class="service-details">
+                <ul>
+                    <li>✔ Garantie jusqu’à 12 mois</li>
+                    <li>✔ Suivi personnalisé</li>
+                    <li>✔ Assistance client</li>
+                </ul>
+                <a href="contact.html" class="contact-link">Nous contacter</a>
+            </div>
+
+            <button class="toggle-btn">En savoir plus →</button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const buttons = document.querySelectorAll(".toggle-btn");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const card = btn.parentElement;
+        card.classList.toggle("active");
+
+        if (card.classList.contains("active")) {
+            btn.textContent = "Réduire ↑";
+        } else {
+            btn.textContent = "En savoir plus →";
+        }
+    });
+});
+</script>
+    
+</body>
+</html>
