@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue - Tourismo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h3>Tourismo</h3>
+    </div>
+
+    <nav>
+        <a href="acceuil.html">Accueil</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="nos_services.html">Nos services</a>
+        <a href="contact.html">Contact</a>
+        <a href="localisation.html">Localisation</a>
+    </nav>
+
+    <div class="recherche">
+        <input type="text" placeholder="Recherche">
+        <button>🔍</button>
+    </div>
+</header>
+
+<!-- TITRE -->
+<div class="contact-titre">
+    <h1>Notre Catalogue</h1>
+    <p>Découvrez nos véhicules de luxe disponibles à la location</p>
+</div>
+
+<!-- FILTRES -->
+<div class="filters">
+    <button onclick="filterCars('all')">Tous</button>
+    <button onclick="filterCars('sport')">Sport</button>
+    <button onclick="filterCars('suv')">SUV</button>
+    <button onclick="filterCars('berline')">Berline</button>
+</div>
+
+<!-- GRID VOITURES -->
+<div class="catalogue-grid">
+
+    <div class="car-card sport">
+        <img src="images/gt63.jpg">
+        <h3>Mercedes AMG GT 43</h3>
+        <p>À partir de 1738€ / mois</p>
+        <a href="gt43.html">Louer</a>
+    </div>
+
+    <div class="car-card sport">
+        <img src="images/gt3rs.jpg">
+        <h3>Porsche 911 GT3 RS</h3>
+        <p>À partir de 5068€ / mois</p>
+        <a href="gt3rs.html">Louer</a>
+    </div>
+
+    <div class="car-card suv">
+        <img src="images/nouveau_urus.jpg">
+        <h3>Lamborghini Urus</h3>
+        <p>À partir de 4676€ / mois</p>
+        <a href="urus.html">Louer</a>
+    </div>
+
+    <div class="car-card suv">
+        <img src="images/range.jpg">
+        <h3>Range Rover</h3>
+        <p>À partir de 1759€ / mois</p>
+        <a href="range.html">Louer</a>
+    </div>
+
+    <div class="car-card berline">
+        <img src="images/mercedes_cls.jpg">
+        <h3>Mercedes CLS</h3>
+        <p>À partir de 1299€ / mois</p>
+        <a href="cls.html">Louer</a>
+    </div>
+
+    <div class="car-card berline">
+        <img src="images/rs6.jpg">
+        <h3>Audi RS6</h3>
+        <p>À partir de 1899€ / mois</p>
+        <a href="rs6.html">Louer</a>
+    </div>
+
+</div>
+
+<script>
+function filterCars(category) {
+    let cards = document.querySelectorAll(".car-card");
+
+    cards.forEach(card => {
+        if (category === "all") {
+            card.style.display = "block";
+        } else {
+            if (card.classList.contains(category)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        }
+    });
+}
+</script>
+
+</body>
+</html>
