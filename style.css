@@ -1,0 +1,627 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+    height: 100vh;
+    background: black;
+    background-image: url("images/porsche_acceuil.png");
+    background-size: cover;   /* plus propre que contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    backdrop-filter: blur(8px); /* effet glass */
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* LOGO */
+.logo h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* RECHERCHE */
+.recherche {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.recherche input {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+}
+
+.recherche button {
+    border: none;
+    padding: 8px 12px;
+    background: white;
+    cursor: pointer;
+}
+
+/* SLOGAN */
+.slogan {
+    position: absolute;
+    top: 45%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.slogan h2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+.slogan h1 {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+/* BOUTON */
+.bouton-catalogue {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+}
+
+.bouton-catalogue a {
+    display: inline-block;
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+/* effet hover premium */
+.bouton-catalogue a:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/*   -------------------- Page n°2 ---------------------------*/
+
+.catalogue {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+}
+
+.carte {
+    width: 240px;
+    background: rgba(30, 30, 30, 0.9); /* gris foncé au lieu de blanc */
+    backdrop-filter: blur(5px); /* petit effet premium */
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.carte img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carte h3 {
+    font-size: 15px;
+    margin: 10px 0 5px;
+}
+
+.carte p {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.carte:hover {
+    transform: translateY(-6px);
+}
+
+.voir-plus {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.voir-plus a {
+    background: rgba(255, 255, 255, 0.1); /* transparent */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+/* HOVER bouton */
+.voir-plus a:hover {
+    background: white;
+    color: black;
+}
+
+/*   -------------------- Page n°3 (conyact) ---------------------------*/
+
+.contact-titre {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contact-titre h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.contact-titre p {
+    color: #bbb;
+}
+
+/* FORMULAIRE */
+.contact-form {
+    margin: 50px auto;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* placeholder */
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #aaa;
+}
+
+/* textarea */
+.form-group textarea {
+    resize: none;
+}
+
+/* BOUTON */
+.contact-btn {
+    padding: 12px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* hover bouton */
+.contact-btn:hover {
+    background: white;
+    color: black;
+}
+
+.success-message {
+    display: none;
+    color: lightgreen;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* INFOS CONTACT */
+.infos-contact {
+    text-align: center;
+    margin-top: 40px;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+
+
+
+/*   -------------------- Page n°4 (localisation) ---------------------------*/
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 80px;
+    padding: 0 40px;
+}
+
+.localisation-texte {
+    max-width: 400px;
+}
+
+.localisation-texte h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.localisation-texte p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* BOUTON MAP */
+.btn-map {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.btn-map:hover {
+    background: white;
+    color: black;
+}
+
+.localisation-carte {
+    width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* -------------------- Page n°5 (services) ---------------------------*/
+
+.services {
+    margin-top: 120px;
+    padding: 0 60px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.service-card {
+    background: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* effet hover premium */
+.service-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* TITRE */
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* TEXTE */
+.service-card p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* LIEN */
+.service-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* animation underline */
+.service-card a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: white;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.service-card a:hover::after {
+    width: 100%;
+}
+
+/* DETAILS CACHÉS */
+.service-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+/* quand ouvert */
+.service-card.active .service-details {
+    max-height: 200px;
+}
+
+/* liste */
+.service-details ul {
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.service-details li {
+    font-size: 13px;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+/* bouton toggle */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* lien contact */
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+/* -------------------- Page n°6 (vrai catalogue) ---------------------------*/
+
+/* FILTRES */
+.filters {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.filters button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background: white;
+    color: black;
+}
+
+/* GRID */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 60px;
+}
+
+/* CARD */
+.car-card {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+}
+
+.car-card p {
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.car-card a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.car-card a:hover {
+    background: white;
+    color: black;
+}
+
+/* HOVER */
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+
+
+/* -------------------- PAGE VOITURE ---------------------------*/
+
+/* CONTENEUR GLOBAL */
+.car-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARTE CENTRÉE */
+.car-box {
+    display: flex;
+    gap: 40px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 850px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    transition: 0.3s;
+}
+
+/* HOVER LÉGER */
+.car-box:hover {
+    transform: scale(1.01);
+}
+
+/* IMAGE */
+.car-box img {
+    width: 380px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* INFOS */
+.car-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TITRE */
+.car-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* PRIX */
+.price {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+.desc {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* SPECS */
+.specs {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.specs li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #ccc;
+}
+
+/* BOUTON */
+.contact-btn {
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* HOVER BOUTON */
+.contact-btn:hover {
+    background: white;
+    color: black;
+}
+
