@@ -34,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
 
-        // 🔐 Hash du mot de passe
+        // Hash du mot de passe
         $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO utilisateurs (email, password)
                 VALUES ('$email', '$mdpHash')";
 
         if ($conn->query($sql) === TRUE) {
-            $message = "Inscription réussie ✅";
+            $message = "Inscription réussie ";
         } else {
             $message = "Email déjà utilisé ❌";
         }
